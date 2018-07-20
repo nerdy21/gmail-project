@@ -1,0 +1,23 @@
+{
+    "primary_condition": "AND",
+    "from_sub_conditions":
+        {
+            "keyword": "from",
+            "value": ["tenmiles", "admin@tenmiles.com"],
+            "condition": "CONTAINS"
+        },
+      "subject_sub_conditions":
+        {
+            "keyword": "subject",
+            "value": ["INTERVIEW", "RESUME"],
+            "condition": "IS_EQUAL"
+        },
+      "received_at_sub_conditions":
+        {
+            "keyword": "received_at",
+            "value": ["01/07/2018", "15/07/2018"],
+            "condition": "IN_BETWEEN"
+        },
+      "keywords": ["from", "subject", "received_at"],
+      "to_do": "ADD_LABEL"
+}
