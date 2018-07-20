@@ -1,0 +1,55 @@
+{
+    "primary_condition": "AND",
+    "sub_conditions": [
+        {
+            "keyword": "from",
+            "value": ["tenmiles", "admin@tenmiles.com"],
+            "condition": "CONTAINS"
+        },
+        {
+            "keyword": "subject",
+            "value": ["INTERVIEW", "RESUME"],
+            "condition": "IS_EQUAL"
+        },
+        {
+            "keyword": "received_at",
+            "value": ["01/07/2018", "15/07/2018"],
+            "condition": "IN_BETWEEN"
+        }
+    ],
+    "to_do": [
+        {
+            "action": "ADD_LABEL",
+            "value": ["IMPORTANT", "SAMPLE"]
+        },
+        {
+            "action": "REMOVE_LABEL",
+            "value": ["SAMPLE"]
+        },
+        {
+            "action": "MARK_READ"
+        }
+    ]
+}
+
+
+
+
+
+{
+      "keywords": ["from", "subject", "received_at"],
+      "to_do": "ADD_LABEL",
+
+      "conditions": {
+          "from": {
+              "contains": [], "not_contains": [], "operand": "AND/OR", "to_do": "MARK_READ", "LABEL": ""
+          },
+          "subject": {
+              "contains": [], "not_contains": [], "operand": "AND/OR", "to_do": "ADD_LABEL", "LABEL": "IMPORTANT"
+          },
+          "received_at": {
+              "from": "02/02/2018", "to": "01/02/2017", "operand": "INBETWEEN", "to_do": "ADD_LABEL",
+              "LABEL": "URGENT"
+          }
+      }
+}
