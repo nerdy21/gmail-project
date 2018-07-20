@@ -1,4 +1,5 @@
-{
+[
+  {
     "primary_condition": "AND",
     "sub_conditions": [
         {
@@ -13,8 +14,8 @@
         },
         {
             "keyword": "received_at",
-            "value": ["01/07/2018", "15/07/2018"],
-            "condition": "IN_BETWEEN"
+            "value": "01/07/2018",
+            "condition": "DATE"
         }
     ],
     "to_do": [
@@ -31,25 +32,4 @@
         }
     ]
 }
-
-
-
-
-
-{
-      "keywords": ["from", "subject", "received_at"],
-      "to_do": "ADD_LABEL",
-
-      "conditions": {
-          "from": {
-              "contains": [], "not_contains": [], "operand": "AND/OR", "to_do": "MARK_READ", "LABEL": ""
-          },
-          "subject": {
-              "contains": [], "not_contains": [], "operand": "AND/OR", "to_do": "ADD_LABEL", "LABEL": "IMPORTANT"
-          },
-          "received_at": {
-              "from": "02/02/2018", "to": "01/02/2017", "operand": "INBETWEEN", "to_do": "ADD_LABEL",
-              "LABEL": "URGENT"
-          }
-      }
-}
+]
